@@ -1,0 +1,39 @@
+{
+  "name": "dse-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "rag:ingest": "tsx --env-file=.env.local scripts/ingest.mts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "@llamaindex/deepseek": "^0.0.40",
+    "@llamaindex/openai": "^0.4.22",
+    "@llamaindex/readers": "^3.1.21",
+    "katex": "^0.16.47",
+    "llamaindex": "^0.12.1",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-breaks": "^4.0.0",
+    "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "daisyui": "^5.7.50",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

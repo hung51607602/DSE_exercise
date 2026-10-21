@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+/* 統一中英文字體：英文用系統無襯線字體，中文用蘋方 / 思源黑體 / 微軟正黑體 */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "PingFang TC", "PingFang HK", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* KaTeX 預設比內文大 21%，調小讓公式和文字比例一致 */
+.katex {
+  font-size: 1.08em;
+}
+
+/* 公式內的中文（KaTeX 沒有中文字型）改用內文字體，避免出現宋體 */
+.katex .cjk_fallback,
+.katex .text {
+  font-family: var(--font-sans);
+}
+
+/* 區塊公式：太長時可橫向捲動，不撐破版面 */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+  margin: 0.5rem 0;
+}
